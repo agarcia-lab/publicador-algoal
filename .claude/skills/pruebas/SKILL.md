@@ -8,6 +8,21 @@ description: Hace 5 copias de prueba de un reel ya subido para subirlas como «R
 Un **Reel de prueba** de Instagram solo se enseña a quien no te sigue y nunca sale en tu perfil: cada copia es otra
 oportunidad de que el vídeo encuentre su público, sin cansar a tus seguidores. Solo Instagram (ni TikTok ni Facebook).
 
+🚨 **En tu cuenta manda esto sobre lo de abajo:**
+- **7 copias por vídeo**, una al día durante 7 días: `herramientas/formula pruebas <nombre> --n 7 --dia <AAAA-MM-DD>
+  --hashtags "…"`, con 7 titulares en `videos/trabajo/<nombre>/ganchos-prueba.txt`.
+- Hasta 7 pruebas al día, **cada una de un vídeo distinto**, de 11:00 a 21:00: las copias de varios vídeos se
+  intercalan para que cada día haya ángulos distintos.
+- **No se suben desde Chrome**: van a la cola de la nube por la API oficial (`trial_params` MANUAL),
+  `herramientas/nube pruebas <nombre> videos/salida/pruebas/<nombre>-prueba-{0..6}.mp4 --desde <día> --espera
+  --grupo semana-<lunes>`. Cada una coge el primer hueco libre (11:00, 12:30, 14:00, 15:30, 17:00, 18:30, 21:00).
+- **Su sí es semanal**: entran con el resto de la semana y salen cuando pulsa «Sí, toda la semana» en Telegram
+  (/video-master, sección 3).
+- **Con mix** (`nube mix`): 2 de las 7 copias son los ángulos que se prueban D-2 y D-1, antes del reel normal. Las
+  otras 5, desde D+1.
+- Antes de meterlas, mira la hoja `videos/salida/pruebas/<nombre>-pruebas.jpg`: cada titular entero, nada en su cara
+  y el subtítulo legible.
+
 ## Lo que le vas contando
 
 Una o dos líneas por paso. Por ejemplo:

@@ -212,7 +212,7 @@ COLOR = ("eq=contrast=1.1:saturation=0.92:gamma=0.97,"   # su pared tira a verde
 
 
 def acabado(base, tramos, palabras, dur):
-    """Como sus referentes (2026-11-03): el plano cambia en cada corte entre normal y acercado (parece otra cámara y
+    """Como sus referentes: el plano cambia en cada corte entre normal y acercado (parece otra cámara y
     tapa el salto) y, si un plano pasa de 6 s, también en la pausa entre dos frases. Encima, su color: más contraste,
     cálido y los bordes algo oscuros. Acerca fijando la altura del pelo, para no mover el texto de detrás."""
     cortes, t = [], 0.0
@@ -323,7 +323,7 @@ def preparar(args):
             palabras = [p for p in palabras if not (x <= (p["a"] + p["b"]) / 2 <= y)]
             tramos = [t for a, b in tramos for t in ([a, min(b, x)], [max(a, y), b]) if t[1] - t[0] > 0.08]
             # Lo que sigue al trozo quitado entra con una pausa de fin de frase (su propio silencio): pegado, se
-            # nota el tijeretazo (2026-11-03, v03: «se notan mucho»)
+            # nota el tijeretazo
             siguiente = next((t for t in tramos if y <= t[0] < y + 1.5), None)
             if siguiente:
                 siguiente[0] = max(y, siguiente[0] - 0.3)
@@ -641,7 +641,7 @@ def avisos(guion, bloques, dur, dir_, aj):
         lista += [f"el bloque de {a:.1f} s acaba en {b:.1f} y el siguiente empieza en {a2:.1f}: se pisan"
                   for (a, b), (a2, _) in zip(capa, capa[1:]) if a2 < b - 0.01]
     # Tu silueta (la palabra detrás) va encima de todo: si pisa una escena a pantalla entera, tu cara se cuela en
-    # la escena (2026-11-03, v07 en el 0:05)
+    # la escena
     escenas = [(a, b) for a, b, clase in bloques if "escena" in clase.split()]
     for a, b in (tuple(map(float, m)) for m in re.findall(r'data-detras="([\d.]+)-([\d.]+)"', guion)):
         lista += [f"la palabra detrás ({a:g}-{b:g} s) pisa la escena de pantalla entera del {ea:g} s: tu cara saldría "
@@ -1346,7 +1346,7 @@ def pruebas(args):
                                 "-preset", "veryfast", "-crf", "16", "-g", "30", "-keyint_min", "30", "-pix_fmt", "yuv420p",
                                 "-c:a", "copy", str(enlace)], check=True)
         sub_css = f"#root .costura:not(.clave) {{ {subs_[sub_]} }}" if partida_ else f"#root .sub {{ {subs_[sub_]} margin-top:{baja}px; }}"
-        if not partida_:   # en una escena a pantalla entera en claro, tinta sobre papel: la caja negra o el amarillo no se leen (2026-11-03, v09)
+        if not partida_:   # en una escena a pantalla entera en claro, tinta sobre papel: la caja negra o el amarillo no se leen
             sub_css += ("\n.tema-claro #root .sub.en-escena, #root.tema-claro .sub.en-escena, .tema-claro .sub.en-escena "
                         "{ background:transparent !important; color:var(--tinta) !important; }")
         retoque = (f"<style>\n{sub_css}\n#root .gancho {{ {ganchos_[gancho]} margin-top:{0 if estilo == 'clip' else baja}px; }}"

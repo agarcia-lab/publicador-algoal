@@ -271,7 +271,7 @@ def quitar_fallos(palabras):
             j = next((i + m + h for h in range(2) if claves[i:i + m] == claves[i + m + h:i + 2 * m + h]
                       and len(claves[i:i + m]) == m and (h == 0 or len(claves[i + m]) <= 3)
                       # «no es ser un CEO, es ser un empleado»: lo de en medio acaba en coma, es una frase entera
-                      # y no un arranque cortado (2026-11-03, v07)
+                      # y no un arranque cortado
                       and not re.search(r"[,.;:?!]$", palabras[i + m + h - 1]["t"])), None)
             if j is not None:
                 quitar(range(i, j))

@@ -90,8 +90,7 @@ def cortar(c, dur, destino, entra=0.0, tipo=None):
     final = (f"{NIVEL.get(tipo or c['tipos'][0], VOLUMEN)},afade=t=in:d={0.1 if entra else 0.2},afade=t=out:st={lecho - 2.5:.3f}:d=2.5"
              + (f",aresample=48000,adelay={int(entra * 1000)}:all=1,apad=whole_dur={dur:.3f}" if entra else ""))
     a, b, funde = c.get("desde", 0), c.get("hasta", c["largo"]), 1.5
-    # «hasta»: donde vuelve a cantar. Si el trozo sin letra no llega al final del vídeo, se repite fundido (2026-11-03:
-    # «en la medida de lo posible, los trozos de canción donde no hay letra»)
+    # «hasta»: donde vuelve a cantar. Si el trozo sin letra no llega al final del vídeo, se repite fundido
     if (entra or c.get("sin_letra")) and a + lecho > b:
         vueltas = math.ceil((lecho - funde) / (b - a - funde))
         filtro = "".join(f"[0:a]atrim={a}:{b},asetpts=N/SR/TB[t{i}];" for i in range(vueltas))
@@ -129,7 +128,7 @@ def poner(dir_, tipo=None, cancion=None, entra=0.0):
         candidatas = [c for c in cat["canciones"] if tipo in c["tipos"]]
         if not candidatas:
             raise SystemExit(f"No tienes canciones de tipo «{tipo}» en marca/musica.json")
-        # Nunca una de las 3 últimas que sonaron (2026-11-03: «la música es la misma, hay que variar»): si en ese
+        # Nunca una de las 3 últimas que sonaron: si en ese
         # tipo no queda otra, una de cualquier tipo que no haya sonado hace poco
         recientes = {i for i, _ in sorted(vistas.items(), key=lambda kv: kv[1][0])[-3:]}
         frescas = [c for c in candidatas if c["id"] not in recientes]

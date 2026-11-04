@@ -67,6 +67,6 @@ MIT. Úsalo, cámbialo y hazlo tuyo.
 ## Autoría y licencia
 
 - **Base de La Fórmula:** Gonzalo López, © 2026, licencia MIT (ver `LICENSE`).
-- **Mejoras, skill `video-master`, publicador de Instagram, parte diario, plantilla de marca y esta versión «Publicador Algoal»:** AlgoAl Growth (Álvaro García).
+- **Mejoras, skill `video-master`, publicador de Instagram en la nube, parte diario, plantilla de marca y esta versión «Publicador Algoal»:** AlgoAl Growth (Álvaro García).
 
 Se distribuye con la licencia MIT original, que se mantiene íntegra.

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Lanza herramientas/nube.py (la cola del publicador en Cloudflare)
+aqui="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+py="$aqui/.venv/bin/python"; [ -x "$py" ] || py="$(command -v python3)"
+cd "$aqui/.." && exec "$py" "$aqui/nube.py" "$@"

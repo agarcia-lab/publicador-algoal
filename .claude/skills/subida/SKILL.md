@@ -12,6 +12,12 @@ falta ninguna API ni cuenta de desarrollador. Lee `marca/marca.json` (cuentas, h
 🚨 **Publicar es tuyo**: se deja todo rellenado y se pulsa «Programar» o «Publicar» solo con su sí a ESE vídeo, a esa
 hora. Nunca escribas su contraseña: si una web pide entrar, que entre él.
 
+En tu cuenta: Instagram ya no se sube desde aquí, lo publica la nube (/video-master,
+sección 3). Aquí queda **TikTok**, el mismo reel a la misma hora (20:30), sin pruebas, con las notas de TikTok Studio
+de `marca/subida.md`. Su sí es el **sí semanal** del botón de Telegram: vale para los reels de TikTok que lista ese
+mensaje, y se programan todos en la sesión del lunes, uno detrás de otro y a ritmo de persona. Después de cada uno,
+`herramientas/nube tiktok <nombre> --cuando "AAAA-MM-DD 20:30"` para que salga en el parte.
+
 🚨 **Meta vigila lo automático, y avisa tarde.** A una cuenta le saltó «Sospechamos que hay comportamientos
 automatizados en tu cuenta» después de programar unos 25 reels en pocos días desde su Chrome y de leer las vistas de
 61 vídeos seguidos. Para que no le pase:

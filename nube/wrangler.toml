@@ -1,0 +1,20 @@
+# El publicador en la nube (ver src/index.js y nube/LEEME.md). Sin dirección pública: solo se despierta con el reloj.
+# Rellena los REEMPLAZAR-* antes de desplegar.
+name = "publicador-mi-marca"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+workers_dev = false
+preview_urls = false
+
+[triggers]
+crons = ["*/5 * * * *"]
+
+[[kv_namespaces]]
+binding = "KV"
+id = "REEMPLAZAR-ID-KV"          # npx wrangler kv namespace create KV
+
+[vars]
+MODO = "prueba"                  # "prueba" = no publica, solo avisa; "real" = publica de verdad
+ZONA = "Europe/Madrid"
+IG_USER_ID = "REEMPLAZAR-ID-IG"  # python3 herramientas/ig_api.py yo
+R2_PUBLIC_URL = "https://REEMPLAZAR.r2.dev"
