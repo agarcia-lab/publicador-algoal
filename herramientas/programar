@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Lanza herramientas/programador.py (calendario, API de Instagram, números y parte de la mañana)
+aqui="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+py="$aqui/.venv/bin/python"; [ -x "$py" ] || py="$(command -v python3)"
+cd "$aqui/.." && exec "$py" "$aqui/programador.py" "$@"

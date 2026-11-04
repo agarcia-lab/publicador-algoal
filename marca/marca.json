@@ -1,0 +1,33 @@
+{
+  "_ayuda": "Tu marca. La leen las herramientas y las skills. /empezar te la rellena con una entrevista; cambia lo que quieras a mano.",
+  "nombre": "",
+  "sector": "",
+  "idioma": "",
+  "zona_horaria": "",
+  "cuentas": {
+    "instagram": "",
+    "tiktok": "",
+    "facebook": ""
+  },
+  "colores": {
+    "_ayuda": "acento: la palabra clave, la cifra que importa, lo que se marca. panel: el cristal de las tarjetas. papel y tinta: el panel claro del estilo «partida».. Vermillion sobre Winter White tiene poco contraste (2,6:1): solo en letra muy grande.",
+    "acento": "",
+    "panel": "",
+    "papel": "",
+    "tinta": ""
+  },
+  "letras": {
+    "_ayuda": "Instaladas: Inter, Montserrat, Poppins, Bebas Neue, Anton, JetBrains Mono, Instrument Serif, Unbounded, DM Serif Display",
+    "texto": "",
+    "grande": "",
+    "mono": "",
+    "titulo": ""
+  },
+  "horas": {
+    "_ayuda": "A qué hora sale cada vídeo si no dices otra. Ajústalas con tus estadísticas (/subida)",
+    "mañana": "",
+    "tarde": ""
+  },
+  "pie_otras_redes": "",
+  "palabras_prohibidas": []
+}
